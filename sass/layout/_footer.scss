@@ -1,0 +1,89 @@
+.footer {
+  background-color: $dark-green;
+  padding: 5rem 0;
+  font-size: 1.4rem;
+  position: relative;
+  @include respond(tab-port) {
+    padding: 2rem 0;
+  }
+
+  //block with inline can be set center by text-align
+  &__logo-box {
+    text-align: center;
+    //display: inline-block;
+    //margin-left: 13rem;
+    //margin-bottom: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__logo {
+    width: 8rem;
+    height: auto;
+  }
+
+  &__nav {
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      margin-top: 8rem;
+    }
+  }
+
+  &__nav,
+  &__copyright {
+    //padding-top: 3rem;
+    display: inline-block;
+    @include respond(tab-port) {
+      padding-top: 0;
+    }
+  }
+
+  &__nav-list {
+    border-top: 1px solid $brown-grey;
+    padding: 2rem;
+    list-style: none;
+    display: inline-block;
+  }
+
+  &__nav-item {
+    display: inline-block;
+    &:not(:last-child)::after {
+      content: "|";
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__nav-link {
+    &:link,
+    &:visited {
+      color: $light-grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:active,
+    &:hover {
+      color: $color-primary-medium;
+      box-shadow: 0 1rem 2rem rgba($black, 0.4);
+      transform: scale(1.1);
+    }
+  }
+
+  &__copyright {
+    //width: 80%;
+    float: right;
+    // color: $light-grey; => will inherit
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+  }
+}

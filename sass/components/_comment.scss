@@ -1,0 +1,89 @@
+.comment {
+  font-size: 1.6rem;
+  background-color: rgba($white, 0.6);
+  width: 75%;
+  //can center by margin when is in block element inside a block element
+  margin: 0 auto;
+  padding: 4rem;
+  padding-left: 7rem;
+  box-shadow: 0 1rem 4rem rgba($dark-grey, 0.3);
+  border-radius: 3px;
+  transform: skewX(-10deg);
+  /* cannot use two transform on one element => add 
+it seperately to text and shape in this case
+    &>*{
+        transform: skewX(10deg);
+    }    
+*/
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 3rem;
+    padding-left: 5rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    //float only work with defining width&height
+    float: left;
+    //border-radius: 50%;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    //background-color: lightblue;
+    /* 
+    defines a shape—which may be non-rectangular—around 
+    which adjacent inline content should wrap
+    */
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(10deg);
+    position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
+  }
+  //always give image width||height in responsive design
+  &__img {
+    height: 100%;
+    transform: scale(1.4);
+    transition: all 0.2s;
+  }
+
+  &__text {
+    transform: skewX(10deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  }
+
+  &__img-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__img-caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(2px) brightness(80%);
+  }
+}

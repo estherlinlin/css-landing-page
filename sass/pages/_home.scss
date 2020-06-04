@@ -1,0 +1,94 @@
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh;
+  @include respond(tab-port) {
+    //padding: 20rem 0;
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-medium, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+  margin-top: -10rem;
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-products {
+  padding: 15rem 0;
+  background-color: ＄light-grey;
+  margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 15rem 0 6rem 0;
+  }
+
+}
+
+.section-comments {
+  position: relative;
+  padding: 15rem 0;
+  background-color: ＄light-grey;
+
+  @include respond(tab-port) {
+    padding: 7rem 0;
+  }
+}
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $blue, darken($blue, 10%));
+
+  @include respond(tab-port) {
+    padding: 8rem 0 15rem 0;
+  }
+}
+
+.contact {
+  background-image: linear-gradient(
+      105deg,
+      rgba($white, 0.9) 0%,
+      rgba($white, 0.9) 60%,
+      transparent 60%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: $default-border-radius;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+
+  //height: 50rem;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+      105deg,
+      rgba($white, 0.9) 0%,
+      rgba($white, 0.9) 70%,
+      transparent 70%
+    ),
+    url(../img/nat-10.jpg);
+  }
+
+  &__form {
+    padding: 5rem;
+    width: 60%;
+
+  @include respond(tab-land) {
+    width: 100%;
+  }
+
+    //background-color: lightblue;
+  }
+}

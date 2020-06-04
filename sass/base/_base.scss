@@ -1,0 +1,46 @@
+//global reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+  //inherit from body, good practice and more fexible when need to change
+}
+
+html {
+  // define 1 rem to 10px which default is 16px in most browsers
+  // for not lock down users setting for font-size in browser 
+  font-size: 62.5%; // 10/16
+
+  // when both max-width match will apply below in order    
+  @include respond(tab-land){
+    font-size: 56.25%; //9px 9/16
+  }
+
+  @include respond(tab-port){
+    font-size: 50%;  //8px
+  }
+
+  // @include respond(phone){
+  //   font-size: 30%;
+  // }
+
+  @include respond(lgDesktop){
+    font-size: 75%; //12px
+  }
+}
+
+body {
+
+  @include respond(tab-port){
+    padding: 0;
+  }
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+::selection{
+  background-color: $brown-grey;
+  color:$white;
+}

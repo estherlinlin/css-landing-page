@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- add this to make responsive work=> should be render according to device-width-->
+    <!-- the width of the content should be the device width, -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/linea-font.css" />
+    <link rel="stylesheet" href="css/style.comp.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Natours | Exciting tours for adventurous people</title>
+  </head>
+  <body>
+    <div class="nav">
+      <input type="checkbox" class="nav__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="nav__btn">
+        <span class="nav__icon"></span>
+      </label>
+      <div class="nav__bg"></div>
+      <nav class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="nav__link">About</a></li>
+          <li class="nav__item">
+            <a href="" class="nav__link">What's there</a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Comments></a></li>
+          <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="img/logo-white.png" alt="logo" class="header__logo" />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <!-- <span class="heading-primary--main">JamsDay</span>
+          <span class="heading-primary--sub"
+            >Sweets to Sweeten up your day</span
+          > -->
+          <span class="heading-primary--main">Outdoors</span>
+          <span class="heading-primary--sub">is where life happens</span>
+        </h1>
+        <a href="" class="btn btn--white btn--animate">Welcome</a>
+      </div>
+    </header>
+
+    <!-- tell search engines,or screen readers where the main part is -->
+    <main>
+      <section class="section-about">
+        <div class="u-center-text u-mb-md">
+          <h2 class="heading-secondary">What's in here</h2>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h3 class="heading-tertiary u-mb-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </h3>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
+              impedit est, culpa officiis explicabo doloremque officia
+              exercitationem sit. Beatae, dicta. Voluptate quo, nam architecto
+              saepe reprehenderit a quaerat vel consequatur iste, est cum
+              distinctio repellendus veritatis minima ipsam quasi. Suscipit
+              recusandae distinctio possimus perspiciatis eum pariatur tempora,
+              rerum beatae obcaecati?
+            </p>
+            <h3 class="heading-tertiary u-mb-sm">
+              Lorem ipsum dolor sit amet.
+            </h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+              doloribus et ut ea, quae, beatae aut pariatur quasi deleniti
+              consequuntur est, minima repellendus illum rem sapiente temporibus
+              explicabo magni tempore!
+            </p>
+            <a href="#popup" class="btn-text">Learn more &rarr;</a>
+          </div>
+          <div class="col-6">
+            <div class="composition">
+              <!-- srcset=> given the width of img and let browser cal which to use
+                size=> when using 900px screen to view the img's width is 171px, so 171/900=20% 
+                last arg as default px.
+                when browser dont support srcset it will use src instead-->
+              <img
+                srcset="img/nat-1.jpg 300w img/nat-1-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                src="img/nat-1-large.jpg"
+                alt="intro 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w img/nat-2-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                src="img/nat-2-large.jpg"
+                alt="intro 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w img/nat-3-large.jpg 1000w"
+                sizes="(max-width:900px) 20vw, (max-width:600px) 30vw, 300px"
+                src="img/nat-3-large.jpg"
+                alt="intro 3"
+                class="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-features">
+        <div class="row">
+          <div class="col-3">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+                assumenda reprehenderit minima doloremque quaerat ex error
+                veritatis exercitationem deserunt laborum.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-geolocalize-01"></i>
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+                assumenda reprehenderit minima doloremque quaerat ex error
+                veritatis exercitationem deserunt laborum.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+                assumenda reprehenderit minima doloremque quaerat ex error
+                veritatis exercitationem deserunt laborum.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-cup"></i>
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+                assumenda reprehenderit minima doloremque quaerat ex error
+                veritatis exercitationem deserunt laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-products">
+        <div class="u-center-text u-mb-md">
+          <h2 class="heading-secondary">Lorem, ipsum dolor.</h2>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__pic card__pic--1"></div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span-1"
+                    >Lorem, ipsum dolor.</span
+                  >
+                </h4>
+                <div class="card__detail">
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--1">
+                <div class="card__cta">
+                  <div class="card__price-box u-mb-lg">
+                    <p class="card__price-text">Just for today</p>
+                    <p class="card__price-value">$85</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Buy now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__pic card__pic--2"></div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span-2"
+                    >Lorem, ipsum dolor.</span
+                  >
+                </h4>
+                <div class="card__detail">
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--2">
+                <div class="card__cta">
+                  <div class="card__price-box u-mb-lg">
+                    <p class="card__price-text">Just for today</p>
+                    <p class="card__price-value">$100</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Buy now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__pic card__pic--3"></div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span-3"
+                    >Lorem, ipsum dolor.</span
+                  >
+                </h4>
+                <div class="card__detail">
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--3">
+                <div class="card__cta">
+                  <div class="card__price-box u-mb-lg">
+                    <p class="card__price-text">Just for today</p>
+                    <p class="card__price-value">$125</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Buy now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-center-text u-mt-lg">
+          <a href="#" class="btn btn--orange">See more jams</a>
+        </div>
+      </section>
+      <section class="section-comments">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
+            Your browser is not supported
+          </video>
+        </div>
+        <div class="u-center-text u-mb-md">
+          <h2 class="heading-secondary">Lorem ipsum dolor sit amet.</h2>
+        </div>
+        <div class="row">
+          <div class="comment">
+            <!-- use figure: img+caption -->
+            <figure class="comment__shape">
+              <img src="img/nat-8.jpg" alt="" class="comment__img" />
+              <figcaption class="comment__img-caption">Lin Lin</figcaption>
+            </figure>
+            <div class="comment__text">
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet consectetur Optio, tempora!
+              </h3>
+              <p class="comment_desp">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Consequuntur, praesentium! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eos minima nulla explicabo
+                blanditiis nobis cum consectetur, voluptatem culpa aspernatur
+                numquam?¸ Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tenetur, reprehenderit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="comment">
+            <!-- use figure: img+caption -->
+            <figure class="comment__shape">
+              <img src="img/nat-9.jpg" alt="" class="comment__img" />
+              <figcaption class="comment__img-caption">Lin Lin</figcaption>
+            </figure>
+            <div class="comment__text">
+              <h3 class="heading-tertiary u-mb-sm">
+                Lorem ipsum dolor sit amet consectetur Optio, tempora!
+              </h3>
+              <p class="comment_desp">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Consequuntur, praesentium! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eos minima nulla explicabo
+                blanditiis nobis cum consectetur, voluptatem culpa aspernatur
+                numquam?¸ Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tenetur, reprehenderit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="u-center-text u-mt-lg">
+          <a href="#" class="btn-text">See more comments &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-contact">
+        <div class="row">
+          <div class="contact">
+            <div class="contact__form">
+              <div class="u-mb-md">
+                <h2 class="heading-secondary">Lorem ipsum sit amet</h2>
+              </div>
+              <form action="#" class="form">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+                <div class="form__group u-mb-md">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="subscribe"
+                      name="subscription"
+                    />
+                    <label for="subscribe" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      Subscribe
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="notsubscribe"
+                      name="subscription"
+                    />
+                    <label for="notsubscribe" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      No, thanks!
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn--orange">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+          <source
+            media="(max-width: 37.5rem)"
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            " />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="logo"
+            class="footer__logo"
+        /></picture>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">About</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">Contact us</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">Help</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">Privacy policy</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="" class="footer__nav-link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <p class="footer__copyright">
+            &copy;2020 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem, id!
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <h2 class="heading-secondary u-mb-sm">Lorem ipsum sit amet.</h2>
+          <h3 class="heading-tertiary u-mb-sm">
+            Lorem ipsum dolor sit amet consectetur.
+          </h3>
+          <p class="popup__text u-mb-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            officiis nam laborum nemo quibusdam adipisci sit dolorem aut amet
+            quos ab, ad quia veniam labore repudiandae ut cum consequatur
+            aspernatur quaerat cumque porro dolorum eligendi. Atque saepe ipsum
+            vel ea totam ratione nostrum inventore reprehenderit, voluptates
+            consequuntur sunt tempora eum?
+          </p>
+          <!-- <a href="" class="btn btn--orange"></a> -->
+        </div>
+        <a href="#section-about" class="popup__close">&times;</a>
+      </div>
+    </div>
+    <!--        
+        <section class="grid-test">
+            <div class="row">
+                <div class="col-6">col-5</div>
+                <div class="col-6">col-5</div>
+            </div>
+            <div class="row">
+                <div class="col-4">col-4</div>
+                <div class="col-4">col-4</div>
+                <div class="col-4">col-4</div>
+            </div>
+        </section>
+    -->
+  </body>
+</html>
